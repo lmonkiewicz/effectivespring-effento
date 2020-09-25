@@ -1,0 +1,18 @@
+spring:
+  data:
+    mongodb:
+      uri: mongodb://localhost/effento
+logging:
+  level:
+    root: INFO
+    pl.effectivespring: DEBUG
+    pl.effectivespring.effento.events.EventService: TRACE
+    org.springframework: WARN
+pl.effento:
+  name: Effento App
+  event:
+    owned:
+      max: 10
+    subscription:
+      max: 10
+
