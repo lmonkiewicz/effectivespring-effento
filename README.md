@@ -2,7 +2,8 @@
 
 Repozytorium zawiera przykładową aplikację, utworzoną na podstawie ebooka.
 
-## Spring Boot Efektywnie - spis treści
+## Spring Boot Efektywnie
+### Spis treści
 1. Wprowadzenie
 2. Co to jest Spring Boot?
 3. Poprawne drzewo zależności
@@ -12,6 +13,6 @@ Repozytorium zawiera przykładową aplikację, utworzoną na podstawie ebooka.
 7. Dockeryzacja
 8. Gotowa aplikacja
 
-## Ebook do pobrania
+## Link do pobrania
 Ebook dostępny jest do pobrania za darmo na stronie:
 https://effectivespring.pl
