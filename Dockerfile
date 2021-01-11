@@ -1,4 +1,4 @@
-FROM openjdk:11
+FROM adoptopenjdk/openjdk11:centos-slim
 
 COPY target/*.jar /app/app.jar
 COPY ./docker-application.yml /app/config/application.yml
