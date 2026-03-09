@@ -2,7 +2,7 @@
 
 Repozytorium zawiera przykładową aplikację, utworzoną na podstawie ebooka.
 
-## Spring Boot 3 Efektywnie
+## Spring Boot 4 Efektywnie
 ### Spis treści
 1. Wprowadzenie
 2. Co to jest Spring Boot?
