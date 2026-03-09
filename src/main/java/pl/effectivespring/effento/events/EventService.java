@@ -49,7 +49,7 @@ public class EventService {
 
     private boolean isOwner(UserId userId, EventId eventId) {
         return eventStorage.find(eventId)
-                .map(event -> Objects.equals(event.getOwner(), userId))
+                .map(event -> Objects.equals(event.owner(), userId))
                 .orElseThrow(() -> new EventNotFoundException(eventId));
     }
 

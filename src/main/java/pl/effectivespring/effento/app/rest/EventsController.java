@@ -3,7 +3,6 @@ package pl.effectivespring.effento.app.rest;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -37,7 +36,7 @@ public class EventsController {
     private final EventService eventService;
     private final EventDTOMapper eventDtoMapper = new EventDTOMapper();
 
-    @GetMapping("/{filter}")
+    @GetMapping(path = "/{filter}", version = "1.0")
     public List<EventDTO> listEvents(
             @RequestHeader(HEADER_USER_ID) UserId userId,
             @PathVariable("filter") EventsFilter filter) {
@@ -46,23 +45,23 @@ public class EventsController {
                 .collect(Collectors.toList());
     }
 
-    @PostMapping
+    @PostMapping(version = "1.0")
     @ResponseStatus(HttpStatus.CREATED)
     public String create(@RequestBody EventDTO event, @RequestHeader(HEADER_USER_ID) UserId userId) {
         return eventService.create(userId, eventDtoMapper.map(event)).asString();
     }
 
-    @PutMapping("/{id}")
+    @PutMapping(path = "/{id}", version = "1.0")
     public void update(@PathVariable("id") EventId eventId, @RequestBody EventDTO event, @RequestHeader(HEADER_USER_ID) UserId userId) {
         eventService.update(userId, eventId, eventDtoMapper.map(event));
     }
 
-    @DeleteMapping("/{id}")
+    @DeleteMapping(path = "/{id}", version = "1.0")
     public void delete(@PathVariable("id") EventId eventId, @RequestHeader(HEADER_USER_ID) UserId userId) {
         eventService.delete(userId, eventId);
     }
 
-    @PostMapping("/{id}/subscribe")
+    @PostMapping(path = "/{id}/subscribe", version = "1.0")
     public void subscribe(@PathVariable("id") EventId eventId, @RequestHeader(HEADER_USER_ID) UserId userId) {
         eventService.subscribe(userId, eventId);
     }

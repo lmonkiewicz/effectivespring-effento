@@ -15,7 +15,6 @@ import java.util.List;
 @EnableMongoRepositories(basePackages = "pl.effectivespring.effento")
 public class MongoConfig {
 
-
     @Bean
     public MongoCustomConversions customConversions(){
         List<Converter<?,?>> converters = new ArrayList<>();

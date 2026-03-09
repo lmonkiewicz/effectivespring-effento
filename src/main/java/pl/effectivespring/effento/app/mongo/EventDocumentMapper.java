@@ -25,11 +25,11 @@ public class EventDocumentMapper {
     }
 
     public void updateEventDocument(Event event, EventDocument eventDocument) {
-        eventDocument.setDate(event.getDate());
-        eventDocument.setName(event.getName());
-        eventDocument.setDescription(event.getDescription());
-        eventDocument.setUrl(event.getUrl());
-        eventDocument.setImgUrl(event.getImgUrl());
+        eventDocument.setDate(event.date());
+        eventDocument.setName(event.name());
+        eventDocument.setDescription(event.description());
+        eventDocument.setUrl(event.url());
+        eventDocument.setImgUrl(event.imgUrl());
     }
 
 }

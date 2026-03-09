@@ -1,8 +1,8 @@
 package pl.effectivespring.effento.app.rest.model;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
-import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
-import com.fasterxml.jackson.databind.annotation.JsonPOJOBuilder;
+import tools.jackson.databind.annotation.JsonDeserialize;
+import tools.jackson.databind.annotation.JsonPOJOBuilder;
 import lombok.Builder;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;

@@ -1,10 +1,8 @@
-# EffectiveSpring - Effento
-
-[![Known Vulnerabilities](https://snyk.io/test/github/lmonkiewicz/effectivespring-effento/badge.svg)](https://snyk.io/test/github/lmonkiewicz/effectivespring-effento)
+# EffectiveDev - Effento
 
 Repozytorium zawiera przykładową aplikację, utworzoną na podstawie ebooka.
 
-## Spring Boot Efektywnie
+## Spring Boot 3 Efektywnie
 ### Spis treści
 1. Wprowadzenie
 2. Co to jest Spring Boot?
@@ -17,4 +15,4 @@ Repozytorium zawiera przykładową aplikację, utworzoną na podstawie ebooka.
 
 ## Link do pobrania
 Ebook dostępny jest do pobrania za darmo na stronie:
-https://effectivespring.pl
+https://effectivedev.pl

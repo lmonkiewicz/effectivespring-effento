@@ -1,13 +1,25 @@
 spring:
   data:
     mongodb:
-      uri: mongodb://localhost/effento
+      uri: mongodb://localhost:27017/effento
+  mvc:
+    log-request-details: true
+    apiversion:
+      use:
+        header: X-API-Version
+      supported: 1.0
+      default: 1.0
+
 logging:
+  structured:
+    format:
+      console: logstash
   level:
     root: INFO
-    pl.effectivespring: DEBUG
-    pl.effectivespring.effento.events.EventService: TRACE
+    pl.effectivedev: DEBUG
+    pl.effectivedev.effento.events.pl.effectivespring.effento.events.EventService: TRACE
     org.springframework: WARN
+
 pl.effento:
   name: Effento App
   event:

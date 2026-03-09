@@ -71,11 +71,11 @@ public class MongoEventStorage implements EventStorage {
 
     private List<EventDocument> queryDocuments(EventQuery query) {
         log.info("Performing query: {}", query);
-        final ZonedDateTime from = query.getDateFrom();
-        final ZonedDateTime to = query.getDateTo();
+        final ZonedDateTime from = query.dateFrom();
+        final ZonedDateTime to = query.dateTo();
 
-        if (query.getSubscriberUserId() != null) {
-            final String subscribedUserId = query.getSubscriberUserId().asString();
+        if (query.subscriberUserId() != null) {
+            final String subscribedUserId = query.subscriberUserId().asString();
             return eventDocumentRepository.findBySubscribedUsersContains(subscribedUserId);
         } else if (from != null && to != null){
             return eventDocumentRepository.findByDateBetween(from, to);

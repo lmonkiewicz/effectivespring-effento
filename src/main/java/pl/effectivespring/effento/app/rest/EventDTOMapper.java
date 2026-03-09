@@ -7,11 +7,11 @@ public class EventDTOMapper {
 
     public EventDTO map(Event event) {
         return EventDTO.builder()
-                .name(event.getName())
-                .description(event.getDescription())
-                .imgUrl(event.getImgUrl())
-                .url(event.getUrl())
-                .date(event.getDate())
+                .name(event.name())
+                .description(event.description())
+                .imgUrl(event.imgUrl())
+                .url(event.url())
+                .date(event.date())
                 .build();
     }
 
